@@ -1,0 +1,306 @@
+{
+  "directed": false,
+  "multigraph": false,
+  "graph": {},
+  "nodes": [
+    {
+      "id": "r_yellow",
+      "state": "S",
+      "protection_metrics": "av",
+      "device_metrics": "router",
+      "os_metrics": "linux"
+    },
+    {
+      "id": "jump1",
+      "state": "S",
+      "protection_metrics": "av",
+      "device_metrics": "server",
+      "os_metrics": "linux"
+    },
+    {
+      "id": "dns1",
+      "state": "S",
+      "protection_metrics": "edr",
+      "device_metrics": "server",
+      "os_metrics": "linux"
+    },
+    {
+      "id": "r_blue",
+      "state": "S",
+      "protection_metrics": "av",
+      "device_metrics": "router",
+      "os_metrics": "linux"
+    },
+    {
+      "id": "www1",
+      "state": "S",
+      "protection_metrics": "av",
+      "device_metrics": "server",
+      "os_metrics": "linux"
+    },
+    {
+      "id": "r_green",
+      "state": "S",
+      "protection_metrics": "av",
+      "device_metrics": "router",
+      "os_metrics": "linux"
+    },
+    {
+      "id": "pc1",
+      "state": "S",
+      "protection_metrics": "none",
+      "device_metrics": "workstation",
+      "os_metrics": "windows"
+    },
+    {
+      "id": "pc2",
+      "state": "S",
+      "protection_metrics": "av",
+      "device_metrics": "workstation",
+      "os_metrics": "windows"
+    },
+    {
+      "id": "pc3",
+      "state": "S",
+      "protection_metrics": "av",
+      "device_metrics": "workstation",
+      "os_metrics": "linux"
+    },
+    {
+      "id": "pc4",
+      "state": "S",
+      "protection_metrics": "av",
+      "device_metrics": "workstation",
+      "os_metrics": "linux"
+    },
+    {
+      "id": "pc5",
+      "state": "S",
+      "protection_metrics": "none",
+      "device_metrics": "workstation",
+      "os_metrics": "windows"
+    },
+    {
+      "id": "pc6",
+      "state": "S",
+      "protection_metrics": "av",
+      "device_metrics": "workstation",
+      "os_metrics": "linux"
+    },
+    {
+      "id": "pc7",
+      "state": "S",
+      "protection_metrics": "none",
+      "device_metrics": "workstation",
+      "os_metrics": "windows"
+    },
+    {
+      "id": "printer1",
+      "state": "S",
+      "protection_metrics": "none",
+      "device_metrics": "iot",
+      "os_metrics": "linux"
+    },
+    {
+      "id": "printer2",
+      "state": "S",
+      "protection_metrics": "none",
+      "device_metrics": "iot",
+      "os_metrics": "linux"
+    },
+    {
+      "id": "smart_display1",
+      "state": "S",
+      "protection_metrics": "none",
+      "device_metrics": "iot",
+      "os_metrics": "linux"
+    },
+    {
+      "id": "r_red",
+      "state": "S",
+      "protection_metrics": "edr",
+      "device_metrics": "router",
+      "os_metrics": "linux"
+    },
+    {
+      "id": "db1",
+      "state": "S",
+      "protection_metrics": "edr",
+      "device_metrics": "server",
+      "os_metrics": "linux"
+    },
+    {
+      "id": "r_remote",
+      "state": "S",
+      "protection_metrics": "edr",
+      "device_metrics": "router",
+      "os_metrics": "linux"
+    },
+    {
+      "id": "r_remote_office",
+      "state": "S",
+      "protection_metrics": "av",
+      "device_metrics": "router",
+      "os_metrics": "linux"
+    },
+    {
+      "id": "r_cloud",
+      "state": "S",
+      "protection_metrics": "av",
+      "device_metrics": "router",
+      "os_metrics": "linux"
+    },
+    {
+      "id": "remote_pc1",
+      "state": "I",
+      "protection_metrics": "none",
+      "device_metrics": "workstation",
+      "os_metrics": "windows"
+    },
+    {
+      "id": "remote_pc2",
+      "state": "S",
+      "protection_metrics": "av",
+      "device_metrics": "workstation",
+      "os_metrics": "windows"
+    },
+    {
+      "id": "remote_pc3",
+      "state": "S",
+      "protection_metrics": "none",
+      "device_metrics": "workstation",
+      "os_metrics": "windows"
+    },
+    {
+      "id": "remote_printer1",
+      "state": "S",
+      "protection_metrics": "none",
+      "device_metrics": "iot",
+      "os_metrics": "linux"
+    },
+    {
+      "id": "cloud_app1",
+      "state": "S",
+      "protection_metrics": "av",
+      "device_metrics": "server",
+      "os_metrics": "linux"
+    },
+    {
+      "id": "cloud_db1",
+      "state": "S",
+      "protection_metrics": "edr",
+      "device_metrics": "server",
+      "os_metrics": "linux"
+    }
+  ],
+  "links": [
+    {
+      "source": "r_yellow",
+      "target": "jump1"
+    },
+    {
+      "source": "r_yellow",
+      "target": "dns1"
+    },
+    {
+      "source": "r_blue",
+      "target": "www1"
+    },
+    {
+      "source": "r_green",
+      "target": "pc1"
+    },
+    {
+      "source": "r_green",
+      "target": "pc2"
+    },
+    {
+      "source": "r_green",
+      "target": "pc3"
+    },
+    {
+      "source": "r_green",
+      "target": "pc4"
+    },
+    {
+      "source": "r_green",
+      "target": "pc5"
+    },
+    {
+      "source": "r_green",
+      "target": "pc6"
+    },
+    {
+      "source": "r_green",
+      "target": "pc7"
+    },
+    {
+      "source": "r_green",
+      "target": "printer1"
+    },
+    {
+      "source": "r_green",
+      "target": "printer2"
+    },
+    {
+      "source": "r_green",
+      "target": "smart_display1"
+    },
+    {
+      "source": "r_red",
+      "target": "db1"
+    },
+    {
+      "source": "r_remote",
+      "target": "r_remote_office"
+    },
+    {
+      "source": "r_remote",
+      "target": "r_cloud"
+    },
+    {
+      "source": "r_remote_office",
+      "target": "remote_pc1"
+    },
+    {
+      "source": "r_remote_office",
+      "target": "remote_pc2"
+    },
+    {
+      "source": "r_remote_office",
+      "target": "remote_pc3"
+    },
+    {
+      "source": "r_remote_office",
+      "target": "remote_printer1"
+    },
+    {
+      "source": "r_cloud",
+      "target": "cloud_app1"
+    },
+    {
+      "source": "r_cloud",
+      "target": "cloud_db1"
+    },
+    {
+      "source": "r_yellow",
+      "target": "r_blue"
+    },
+    {
+      "source": "r_yellow",
+      "target": "r_green"
+    },
+    {
+      "source": "r_yellow",
+      "target": "r_remote"
+    },
+    {
+      "source": "r_blue",
+      "target": "r_green"
+    },
+    {
+      "source": "r_green",
+      "target": "r_red"
+    }
+  ]
+}
