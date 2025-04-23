@@ -16,9 +16,8 @@ def animate(i, G, pos):
             neighbors = G.neighbors(node)
             for n in neighbors:
                 if willBeInfected(G.nodes[n]["infection_prob"]):
-                    G.nodes[n]["state"] = "I"
-
-    nx.set_edge_attributes(G, { ("A", "B"): susceptible if i%2 == 0 else infected})
+                    nx.set_node_attributes(G, { n: {**infected} })
+                    nx.set_edge_attributes(G, { (n, node): infected})
 
     plt.clf()
     plt.cla()
@@ -40,7 +39,7 @@ def main():
     ]
 
     edges = [
-        ("A", "B", {"weight": 4, "color": "gray"}), 
+        ("A", "B", {"color": "gray"}), 
         ("B", "C", {"color": "gray"}), 
         ("A", "D", {"color": "gray"}), 
         ("A", "C", {"color": "gray"})
@@ -52,7 +51,7 @@ def main():
 
     pos = nx.spring_layout(G)
 
-    ani = animation.FuncAnimation(fig, animate, interval=200, fargs=(G, pos))
+    ani = animation.FuncAnimation(fig, animate, interval=1000, fargs=(G, pos))
     plt.show()
 
 
