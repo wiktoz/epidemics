@@ -1,0 +1,14 @@
+{
+    "directed": false,
+    "multigraph": false,
+    "graph": {},
+    "nodes": [
+      {"id": "A", "state": "S", "protection_metrics": "none", "device_metrics": "server", "os_metrics": "linux"},
+      {"id": "B", "state": "S", "protection_metrics": "none", "device_metrics": "server", "os_metrics": "linux"},
+      {"id": "C", "state": "I", "protection_metrics": "av", "device_metrics": "iot", "os_metrics": "windows"}
+    ],
+    "links": [
+      {"source": "A", "target": "B"},
+      {"source": "B", "target": "C"}
+    ]
+  }
