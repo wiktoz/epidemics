@@ -23,10 +23,10 @@ class Node:
     
     def get_recovery_time(self):
         if self.protection_type == "edr":
-            return 1
+            return 3
         elif self.protection_type == "av":
-            return 5
-        return 10
+            return 6
+        return 15
 
     def get_node(self):
         return {

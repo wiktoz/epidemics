@@ -2,7 +2,7 @@ from graph import Graph
 from epidemics import Epidemics
 
 def main():
-    G = Graph("./nodes.json")
+    G = Graph("graphs/nodes.json")
 
     epidemics = Epidemics(G)
     epidemics.start()

@@ -3,9 +3,11 @@ import matplotlib.pyplot as plt # type: ignore
 import matplotlib.animation as animation # type: ignore
 import random
 import networkx as nx
+from quarantine import SelectiveQuarantine, Quarantine
 
 susceptible = {"state": "S", "color": "gray"}
 infected = {"state": "I", "color": "red"}
+recovered = {"state": "R", "color": "green"}
 
 class Epidemics():
     def __init__(self, G):
@@ -18,12 +20,24 @@ class Epidemics():
     def advance(self, i):
         print("Step: ", i, "\n")
         graph = self.G.get_graph()
+        if (i == 3):
+            strategy = SelectiveQuarantine()
+            quarantine = Quarantine(strategy)
+            quarantine.do_quarantine(graph)
+        for node in graph.nodes:
+            if graph.nodes[node]["state"] == "I":
+                graph.nodes[node]["recovery_time"] -= 1
+                if graph.nodes[node]["recovery_time"] <= 0:
+                    graph.nodes[node]["state"] = "R"
+                    nx.set_node_attributes(graph, { node: {**recovered} })
+                    nx.set_edge_attributes(graph, { (node, node): recovered })
+                    print("Node ", node, " recovered. \n")
 
         for node in graph.nodes:
             if graph.nodes[node]["state"] == "I":
                 for n in graph.neighbors(node):
                     print(graph.nodes[n], "\n")
-                    if self.will_infect(graph.nodes[n]["infection_prob"]):
+                    if self.will_infect(graph.nodes[n]["infection_prob"]) and graph.nodes[n]["state"] == "S":
                         nx.set_node_attributes(graph, { n: {**infected} })
                         nx.set_edge_attributes(graph, { (n, node): infected})
 
