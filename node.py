@@ -33,6 +33,7 @@ class Node:
             "state": self.state, 
             "color": "red" if self.state == "I" else "gray",
             "infection_prob": self.get_infection_probability(), 
-            "recovery_time": self.get_recovery_time()
+            "recovery_time": self.get_recovery_time(),
+            "centrality": self.centrality
         }
 
