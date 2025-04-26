@@ -299,6 +299,14 @@
       "target": "r_remote"
     },
     {
+      "source": "r_yellow",
+      "target": "r_remote_office"
+    },
+    {
+      "source": "r_yellow",
+      "target": "r_cloud"
+    },
+    {
       "source": "r_blue",
       "target": "r_green"
     },
@@ -311,6 +319,14 @@
       "target": "r_remote"
     },
     {
+      "source": "r_blue",
+      "target": "r_remote_office"
+    },
+    {
+      "source": "r_blue",
+      "target": "r_cloud"
+    },
+    {
       "source": "r_green",
       "target": "r_red"
     },
@@ -319,8 +335,36 @@
       "target": "r_remote"
     },
     {
+      "source": "r_green",
+      "target": "r_remote_office"
+    },
+    {
+      "source": "r_green",
+      "target": "r_cloud"
+    },
+    {
       "source": "r_red",
       "target": "r_remote"
+    },
+    {
+      "source": "r_red",
+      "target": "r_remote_office"
+    },
+    {
+      "source": "r_red",
+      "target": "r_cloud"
+    },
+    {
+      "source": "r_remote",
+      "target": "r_remote_office"
+    },
+    {
+      "source": "r_remote",
+      "target": "r_cloud"
+    },
+    {
+      "source": "r_remote_office",
+      "target": "r_cloud"
     }
   ]
 }
